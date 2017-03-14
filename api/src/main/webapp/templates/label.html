@@ -1,0 +1,56 @@
+<div class="ui olive center aligned segment" ng-controller="LabelController">
+	<div class = "ui left aligned inverted olive segment"> 
+		<button class = "ui large blue button" ng-click="exit()" >
+			Exit
+		</button>
+		<div class = "ui olive huge label">
+			{{result_count}} / {{maximum_compare}}
+		</div>
+		<div class = "ui olive massive label">
+			Choose the caption that is better for the image. If both are good or bad, choose draw.
+		</div>
+	</div>
+
+	<div class = "ui center aligned grid">
+	<div class = "row">
+			<div class = "nine wide column">
+			<a class = "ui gray huge label">
+				Caption A: {{show_cap1}}
+			</a>
+			</div>
+			<div class = "two wide column">
+			<button class = "ui large green button" ng-click="vote(1)">
+			A is better!
+			</button>
+			</div>
+	</div>
+	<div class = "row">
+		<div class = "nine wide column">
+		</div>
+		<div class = "two wide column">
+		<button class = "ui large green button" ng-click="vote(0)">
+			Same good or bad
+		</button>
+		</div>
+	</div>
+	<div class = "row">
+			<div class = "nine wide column">
+			<a class = "ui gray huge label">
+				Caption B: {{show_cap2}}
+			</a>
+			</div>
+			<div class = "two wide column">
+			<button class = "ui large green button" ng-click="vote(2)">
+			B is better!
+			</button>
+			</div>
+	</div>
+
+	<div class = "row">
+		<div class = "ui image">
+			<img src="{{img_address}}">
+		</div>
+	</div>
+	</div>
+</div>
+

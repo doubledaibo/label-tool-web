@@ -1,0 +1,8 @@
+results
+compute_statistics.py
+api/build
+api/src/main/webapp/coco_val_images
+api/src/main/webapp/evaluation
+.gradle
+*~
+
