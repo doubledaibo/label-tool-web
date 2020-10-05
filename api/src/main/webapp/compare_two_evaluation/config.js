@@ -1,0 +1,1 @@
+config = {"cap_gt_json": "gt.json", "cap_mle_json": "mle.json", "cap_gan_json": "gan.json", "result_root": "/home/bdai/WorkSpace/cap-web/api/src/main/webapp/evaluation/results", "img_root": "coco_val_images", "img_list": "coco_val_imgs.json"};

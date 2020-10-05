@@ -1,6 +1,7 @@
 "use strict";
 // Define app, only one app for whole web site.
 var mainApp = angular.module("mainApp", ["ngRoute"]);
+
 mainApp.factory("shareName", function() {
 	var name = "";
 	function get() {
@@ -14,3 +15,5 @@ mainApp.factory("shareName", function() {
 		get: get
 	}
 });
+
+

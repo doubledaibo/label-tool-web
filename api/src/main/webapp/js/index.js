@@ -6,7 +6,7 @@ mainApp.controller("IndexController", function($scope, shareName, $http, $locati
 			alert("Please input your name first!");
 		else { 
 			shareName.set($scope.username);
-			$location.url("/web/label");
+			$location.url("/web/select");
 		}
 	};	
 });

@@ -5,9 +5,13 @@ mainApp.config(function($routeProvider, $locationProvider) {
             templateUrl: "templates/index.html",
             controller: "IndexController"
         })
-        .when("/web/label", {
-            templateUrl: "templates/label.html",
-            controller: "LabelController"
+//        .when("/web/label", {
+//          templateUrl: "templates/label.html",
+//          controller: "LabelController"
+//        })
+	.when("/web/select", {
+	    templateUrl: "templates/select.html",
+            controller: "SelectController"
         })
         .when("/", {
             redirectTo: "/web/index"

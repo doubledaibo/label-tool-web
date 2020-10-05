@@ -1,0 +1,82 @@
+<div class="ui olive center aligned vertical segment" ng-controller="SelectController">
+	<div class = "ui left aligned inverted olive vertical segment"> 
+<!--		<button class = "ui large blue button" ng-click="exit()" >
+			Exit
+		</button>-->
+		<div class = "ui olive massive label">
+			Choose the best and the worse captions among a set of candidates. If there are multiple suitable options, choose any one of them. "UNK" = "unknown".
+		</div>
+	</div>
+	<div class = "ui vertical segment">
+	<div class = "ui center aligned grid">
+
+	<div class = "row">
+		<div class = "three wide column">
+			<div class = "ui grid">
+			<div class = "row"> </div>
+			<div class = "row">
+			<div class = "ui image">
+				<img src="{{img_address}}">
+			</div>
+			</div>
+			</div>
+		</div>
+		<div class = "nine wide column">
+			<div class = "ui center aligned grid">
+			<div class = "row" ng-repeat = "cap in caps">
+
+				<div class = "three wide column">
+				<div class = "ui vertical segment">
+
+				<div class = "ui buttons">
+					<button class="ui {{worst_color[cap.idx]}} button" ng-click="update_worst(cap.idx)">Worst</button>
+					<div class="or"></div>
+					<button class="ui {{best_color[cap.idx]}} button" ng-click="update_best(cap.idx)">Best</button>
+				</div>
+				</div>
+				</div>
+
+				<div class = "six wide left aligned column">
+				<div class = "ui big {{cap_color[cap.idx]}} message"> {{cap.caption}} </div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "three wide column">
+			<div class = "ui huge label">
+			Image: {{offset + 1}} / {{maximum_compare}}
+			</div>
+		</div>
+		<div class = "two wide column">
+		</div>
+		<div class = "two wide column">
+		<button class = "ui large blue button" ng-click="back()" >
+			Previous
+		</button>
+		</div>
+		<div class = "two wide column">
+		<button class = "ui large blue button" ng-click="next()" >
+			Next
+		</button>
+		</div>
+		<div class = "one wide column">
+		</div>
+		<div class = "two wide column">
+		<button class = "ui large red button" ng-click="exit()" >
+			Done
+		</button>
+		</div>
+	</div>
+
+	</div>
+	</div>
+	<div class = "ui left aligned olive vertical segment">
+	Status:
+	<button class = "ui {{sample_color[offset - 1]}} button" ng-repeat = "offset in offsets" ng-click="jumpto(offset - 1)">
+		{{offset}}
+	</button>
+	</div>
+</div>
+
